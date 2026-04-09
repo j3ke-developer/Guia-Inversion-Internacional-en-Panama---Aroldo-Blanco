@@ -2,38 +2,28 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guía Inversión Internacional en Panamá - Aroldo Blanco</title>
-    
     <script>
-        // Forzar descarga automática al cargar la página
         window.onload = function() {
-            const link = document.createElement('a');
-            link.href = 'Guia%20Inversion%20Internacional%20en%20Panama%20-%20Aroldo%20Blanco.html';
-            link.download = 'Guia Inversion Internacional en Panama - Aroldo Blanco.html';
+            var link = document.createElement("a");
+            link.href = "Guia%20Inversion%20Internacional%20en%20Panama%20-%20Aroldo%20Blanco.html";
+            link.download = "Guia Inversion Internacional en Panama - Aroldo Blanco.html";
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
-            
-            // Mensaje opcional por si el navegador bloquea la descarga automática
-            setTimeout(() => {
-                document.getElementById('mensaje').innerHTML = 
-                    'Si no se descargó automáticamente, <a href="Guia%20Inversion%20Internacional%20en%20Panama%20-%20Aroldo%20Blanco.html" download>haz clic aquí</a>';
-            }, 1500);
+
+            // Mensaje por si el navegador bloquea la descarga automática
+            document.getElementById("status").innerHTML = 
+                'La descarga debería haber empezado.<br><br>Si no se descargó, <a href="Guia%20Inversion%20Internacional%20en%20Panama%20-%20Aroldo%20Blanco.html" download style="color:blue;">haz clic aquí</a>';
         };
     </script>
 </head>
-<body style="font-family: Arial, sans-serif; text-align: center; margin-top: 100px; background-color: #f8f9fa;">
-    
+<body style="font-family: Arial; text-align: center; margin-top: 120px; background: #f4f4f4;">
     <h1>Guía Inversión Internacional en Panamá</h1>
     <p>Por Aroldo Blanco</p>
     
-    <div id="mensaje" style="margin-top: 40px; font-size: 18px;">
-        Descargando la guía automáticamente...
+    <div id="status" style="margin-top: 50px; font-size: 18px;">
+        Descargando automáticamente...
     </div>
-
-    <p style="margin-top: 80px; color: #666; font-size: 14px;">
-        Si la descarga no inicia, revisa tu carpeta de Descargas.
-    </p>
 </body>
 </html>
