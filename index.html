@@ -3,47 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guía Inversión Internacional en Panamá</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 80px;
-            background-color: #f8f9fa;
-        }
-        h1 {
-            color: #1e3a8a;
-        }
-        .descargar-btn {
-            display: inline-block;
-            padding: 18px 40px;
-            font-size: 20px;
-            background-color: #1e40af;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            margin-top: 30px;
-            transition: 0.3s;
-        }
-        .descargar-btn:hover {
-            background-color: #1e3a8a;
-            transform: scale(1.05);
-        }
-    </style>
+    <title>Guía Inversión Internacional en Panamá - Aroldo Blanco</title>
+    
+    <script>
+        // Forzar descarga automática al cargar la página
+        window.onload = function() {
+            const link = document.createElement('a');
+            link.href = 'Guia%20Inversion%20Internacional%20en%20Panama%20-%20Aroldo%20Blanco.html';
+            link.download = 'Guia Inversion Internacional en Panama - Aroldo Blanco.html';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Mensaje opcional por si el navegador bloquea la descarga automática
+            setTimeout(() => {
+                document.getElementById('mensaje').innerHTML = 
+                    'Si no se descargó automáticamente, <a href="Guia%20Inversion%20Internacional%20en%20Panama%20-%20Aroldo%20Blanco.html" download>haz clic aquí</a>';
+            }, 1500);
+        };
+    </script>
 </head>
-<body>
+<body style="font-family: Arial, sans-serif; text-align: center; margin-top: 100px; background-color: #f8f9fa;">
+    
     <h1>Guía Inversión Internacional en Panamá</h1>
     <p>Por Aroldo Blanco</p>
     
-    <a href="Guia%20Inversion%20Internacional%20en%20Panama%20-%20Aroldo%20Blanco.html" 
-       download="Guia Inversion Internacional en Panama - Aroldo Blanco.html">
-        <div class="descargar-btn">
-            ⬇️ Descargar la Guía Completa
-        </div>
-    </a>
+    <div id="mensaje" style="margin-top: 40px; font-size: 18px;">
+        Descargando la guía automáticamente...
+    </div>
 
-    <p style="margin-top: 60px; color: #666; font-size: 14px;">
-        Haz clic en el botón de arriba para descargar el archivo
+    <p style="margin-top: 80px; color: #666; font-size: 14px;">
+        Si la descarga no inicia, revisa tu carpeta de Descargas.
     </p>
 </body>
 </html>
